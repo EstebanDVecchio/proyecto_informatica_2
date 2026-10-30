@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Firmware: Compilar",
+            "type": "shell",
+            "command": "${env:HOME}/.platformio/penv/bin/pio run",
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$platformio"]
+        },
+        {
+            "label": "Firmware: Subir al Arduino",
+            "type": "shell",
+            "command": "${env:HOME}/.platformio/penv/bin/pio run -t upload",
+            "problemMatcher": ["$platformio"]
+        },
+        {
+            "label": "Firmware: Monitor serie",
+            "type": "shell",
+            "command": "${env:HOME}/.platformio/penv/bin/pio device monitor",
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Simulador: Ejecutar (Processing)",
+            "type": "shell",
+            "command": "processing cli --sketch=${workspaceFolder}/simulador/SimuladorDronUI --output=${workspaceFolder}/simulador/SimuladorDronUI/out --force --run",
+            "problemMatcher": []
+        },
+        {
+            "label": "Simulador: Abrir en Processing IDE",
+            "type": "shell",
+            "command": "processing ${workspaceFolder}/simulador/SimuladorDronUI/SimuladorDronUI.pde",
+            "problemMatcher": []
+        }
+    ]
+}

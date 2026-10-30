@@ -1,0 +1,37 @@
+{
+    // --- Asociaciones de archivos ---
+    "files.associations": {
+        "*.pde": "Processing",
+        "*.ino": "cpp",
+        "*.h": "cpp"
+    },
+
+    // --- Ocultar artefactos de compilación ---
+    "files.exclude": {
+        "**/.pio": true,
+        "simulador/**/out": true,
+        "simulador/**/application.*": true
+    },
+    "search.exclude": {
+        "**/.pio": true,
+        "simulador/**/out": true
+    },
+    "files.watcherExclude": {
+        "**/.pio/**": true
+    },
+
+    // --- Formato y finales de línea (evita diffs ruidosos en Git) ---
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+
+    // --- Git ---
+    "git.enabled": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "never",
+
+    // --- Processing: abrir sketches en la misma ventana ---
+    "processing.newWindow": false,
+    "processing.autosave": true
+}
